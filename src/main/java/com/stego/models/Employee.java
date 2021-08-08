@@ -12,5 +12,6 @@ public class Employee {
     private String phoneNumber;
     private String jobTitle;
     private String employeeImage;
+    private String managerFlag;
     private PersonalInformation personalInformation;
 }
