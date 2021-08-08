@@ -21,14 +21,13 @@ public class EmployeeController {
         this.employeeService = empService;
     }
 
-    @CrossOrigin(origins = "http://localhost:8081/%22")
+    @CrossOrigin
     @GetMapping(value = "/employees/{employeeId}")
-    public ResponseEntity<Employee> getProduct(@PathVariable("employeeId") String employeeId, @RequestBody ManagerFlag flag) throws IOException, InterruptedException {
-        System.out.println(flag);
-        System.out.println(Boolean.parseBoolean(flag.getFlag()));
-        return new ResponseEntity<>(getEmployee(employeeId,Boolean.parseBoolean(flag.getFlag())), HttpStatus.OK);
+    public ResponseEntity<Employee> getProduct(@PathVariable("employeeId") String employeeId, @RequestParam String flag) throws IOException, InterruptedException {
+        return new ResponseEntity<>(getEmployee(employeeId,Boolean.parseBoolean(flag)), HttpStatus.OK);
     }
 
+    @CrossOrigin
     @PutMapping(value = "/employees")
     public HttpStatus createEmployee(@RequestBody Employee employee){
         try{

@@ -26,12 +26,10 @@ public class EmployeeService {
     public Employee getFullEmployeeDetails(String employeeId, boolean managerFlag) throws IOException, InterruptedException {
         Optional<EmployeeInformation> entity = employeeRepository.findById(employeeId);
         if(managerFlag){
-            System.out.println("I'm a manager");
             triggerStego(entity.get().getPhoto(), true);
             PersonalInformation personalInfo = getPersonalInfo();
             return mapEmployee(entity.get(), personalInfo);
         }
-        System.out.println("Not a manager");
         return mapEmployee(entity.get(), null);
     }
 
