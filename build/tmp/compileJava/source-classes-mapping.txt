@@ -11,7 +11,9 @@ com/stego/EmployeeInfoApplication.java
 com/stego/models/EmployeeInformation.java
  com.stego.models.EmployeeInformation
  com.stego.models.EmployeeInformation$EmployeeInformationBuilder
-com/stego/controller/EmployeeController.java
- com.stego.controller.EmployeeController
 com/stego/service/EmployeeService.java
  com.stego.service.EmployeeService
+com/stego/controller/EmployeeController.java
+ com.stego.controller.EmployeeController
+com/stego/models/ManagerFlag.java
+ com.stego.models.ManagerFlag

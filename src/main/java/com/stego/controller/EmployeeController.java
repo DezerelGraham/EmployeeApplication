@@ -21,6 +21,7 @@ public class EmployeeController {
         this.employeeService = empService;
     }
 
+    @CrossOrigin(origins = "http://localhost:8081/%22")
     @GetMapping(value = "/employees/{employeeId}")
     public ResponseEntity<Employee> getProduct(@PathVariable("employeeId") String employeeId, @RequestBody ManagerFlag flag) throws IOException, InterruptedException {
         System.out.println(flag);
