@@ -36,7 +36,7 @@ public class EmployeeService {
     private Employee mapEmployee(EmployeeInformation employeeInformation, PersonalInformation personalInfo) {
         return Employee.builder()
                 .employeeId(employeeInformation.getEmployeeId())
-                .employeeImage(employeeInformation.getPhoto())
+                .employeeImage("http://localhost:8000/" + employeeInformation.getEmployeeId() + "_hidden.jpg")
                 .firstName(employeeInformation.getFirstName())
                 .lastName(employeeInformation.getLastName())
                 .jobTitle(employeeInformation.getJobTitle())
